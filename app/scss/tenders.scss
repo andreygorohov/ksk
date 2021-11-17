@@ -1,0 +1,630 @@
+.tenders {
+    &__content-wrap {
+        display: none;
+        &.active {
+            display: block;
+        }
+    }
+    &__content {
+        max-width: 1275px;
+    }
+    &__row {
+        display: flex;
+        margin: 35px 0px 48px;
+    }
+    &__settings {
+        width: 31px;
+        height: 26px;
+        background: url("../img/tenders/set.svg") 0 0 / contain no-repeat;
+        margin: 0px 0px 24px auto;
+        display: block;
+    }
+    .tenders-tab {
+        display: none;
+        &.active {
+            display: flex;
+            .slider-nav {
+                display: flex;
+            }
+        }
+    }
+    .year {
+        z-index: 3;
+        position: relative;
+        // top: -47px;
+    }
+    .swiper-wrapper {
+        transition: height 0.3s !important;
+        &.auto-height {
+            height: auto !important;
+        }
+    }
+    .swiper-container {
+        // padding: 0px 15px;
+        // overflow-y: scroll;
+        padding: 15px 15px 0px 15px;
+        &::-webkit-scrollbar {
+            display: none;
+        }
+    }
+    .swiper-slide {
+        background: #fff;
+        // overflow: scroll;
+    }
+    .slider-nav {
+        display: none;
+        &.active {
+            display: flex;
+        }
+    }
+    &__wrapper {
+        display: flex;
+        // margin-top: 40px;
+        margin-bottom: 43px;
+    }
+    &__row-item {
+        margin-right: 130px;
+        display: flex;
+        align-items: center;
+        span {
+            font-size: 16px;
+            line-height: 20px;
+            color: #000;
+        }
+        &:last-child {
+            margin: 0px 0px 0px 0px;
+        }
+    }
+
+    &__down-btn {
+        margin-left: 28px;
+    }
+    .mob-search {
+        display: none;
+    }
+    &__settings {
+        display: none;
+    }
+    @media (max-width: $md1+px) {
+        &__content {
+            max-width: 1000px;
+        }
+        &__wrapper {
+            flex-direction: column;
+        }
+        .slider-nav {
+            margin: 0px auto;
+        }
+        .year {
+            width: auto;
+        }
+    }
+    @media (max-width: $md2+px) {
+        &__content {
+            max-width: 780px;
+        }
+    }
+    @media (max-width: $md3+px) {
+        &__content {
+            padding: 0;
+        }
+        .swiper-container {
+            padding: 15px 10px 0 10px;
+        }
+        &__row {
+            display: block;
+        }
+        &__row-item {
+            box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.1);
+            margin: 0px 0px 16px 0px;
+            height: 56px;
+            padding: 12px 16px;
+            &:last-child {
+                margin: 0px 0px 0px 0px;
+            }
+            span {
+                font-size: 14px;
+                line-height: 16px;
+            }
+        }
+        &__down-btn {
+            margin-left: auto;
+        }
+    }
+    @media (max-width: 576px) {
+        .mob-tabs-title {
+            padding: 0;
+        }
+        &__settings {
+            display: block;
+        }
+        .year {
+            &:before {
+                content: "";
+                width: 130%;
+            }
+        }
+    }
+}
+
+.tenders {
+    &__search {
+    }
+}
+.tenders-search {
+    display: flex;
+    margin-bottom: 24px;
+    &__input {
+        width: 229px;
+        height: 48px;
+        position: relative;
+        border: 1px solid #f3f3f3;
+
+        input {
+            max-width: 100%;
+            background: transparent;
+            cursor: pointer;
+            // line-height: 20px;
+            color: #a0a0a0;
+            padding-right: 48px;
+            padding-left: 24px;
+            // line-height: normal;
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            &::placeholder {
+                color: #a0a0a0;
+                line-height: normal;
+            }
+            &.active {
+                color: #000;
+            }
+        }
+        &.active {
+            &:before {
+                transform: rotate(-45deg);
+            }
+            &:after {
+                transform: rotate(45deg);
+            }
+            .tenders-search__list {
+                height: auto;
+                opacity: 1;
+            }
+            .tenders-search__arrow {
+                transform: rotate(180deg);
+            }
+        }
+    }
+    &__arrow {
+        width: 48px;
+        height: 48px;
+        background: #000;
+        position: absolute;
+        right: 0px;
+        top: 24px;
+        margin-top: -24px;
+        z-index: 4;
+        display: block;
+        background: url(../img/tenders/arrow.svg) center center/29% no-repeat;
+        padding: 2px;
+        cursor: pointer;
+        transition: all 0.3s;
+    }
+    &__list {
+        transition: all 0.7s;
+        opacity: 0;
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        z-index: 3;
+        height: 0px;
+        overflow: hidden;
+        background: #ffffff;
+        box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.12);
+        li {
+            display: flex;
+            padding: 7px 24px;
+            align-items: center;
+            cursor: pointer;
+            transition: all 0.3s;
+            &:last-child {
+                padding-bottom: 15px;
+            }
+            &:first-child {
+                padding-top: 15px;
+                padding-right: 36px;
+            }
+            &:hover {
+                font-family: $rfb;
+            }
+        }
+    }
+    &__list-title {
+        font-family: $rfb;
+        padding-top: 15px;
+    }
+    &__reset {
+        border: 1px solid #f3f3f3;
+        padding: 0px 24px 0px 24px;
+        background: none;
+        width: 229px;
+        font-size: 16px;
+        line-height: 20px;
+        color: #000;
+    }
+    &__btn {
+        background: #000;
+        flex: 1 1 auto;
+        background: #000 url(../img/tenders/search.svg) center 3px no-repeat;
+    }
+    @media (max-width: $md1+px) {
+        display: block;
+        max-width: 50%;
+        &__input {
+            width: 100%;
+            height: auto;
+            min-height: 48px;
+            input {
+                width: 100%;
+            }
+        }
+        &__reset {
+            height: 48px;
+            width: 100%;
+        }
+        &__btn {
+            height: 48px;
+            width: 100%;
+        }
+        &__list {
+            position: relative;
+            margin: -40px 0px 0px 0px;
+        }
+    }
+    @media (max-width: $md3+px) {
+        max-width: 100%;
+    }
+    @media (max-width: 576px) {
+        display: none;
+        &.for-mob {
+            display: block;
+        }
+        &__arrow {
+            top: 20px;
+            width: 40px;
+            height: 40px;
+            margin-top: -20px;
+        }
+        &__input {
+            min-height: 40px;
+            input {
+                font-size: 14px;
+            }
+            &:before {
+                content: "";
+                right: 21px;
+                height: 2px;
+            }
+            &:after {
+                content: "";
+                right: 17px;
+                height: 2px;
+            }
+        }
+        &__btn {
+            background: #000 url("../img/tenders/mob-search.svg") center center no-repeat;
+            height: 40px;
+        }
+    }
+}
+
+.tenders-block {
+    background: #ffffff;
+    box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.08);
+    position: relative;
+    margin-bottom: 24px;
+    &:hover {
+        .show-btn__icon {
+            transition: all 0.3s;
+            &:before {
+                transition: all 0.3s;
+                content: "";
+                transform: translate(-50%, -50%) rotate(90deg);
+            }
+            &:after {
+                transition: all 0.3s;
+                content: "";
+                transform: translate(-50%, -50%) rotate(90deg);
+            }
+        }
+    }
+    .show-btn {
+        opacity: 1;
+        &.active {
+            .show-btn__icon {
+                transition: all 0.3s;
+                &:before {
+                    transition: all 0.3s;
+                    content: "";
+                    transform: translate(-50%, -50%) rotate(45deg);
+                }
+                &:after {
+                    transition: all 0.3s;
+                    content: "";
+                    transform: translate(-50%, -50%) rotate(45deg);
+                }
+            }
+        }
+    }
+    &__wrap {
+        display: flex;
+    }
+    &__item {
+        flex: 0 0 288px;
+        background: #58585a;
+        display: flex;
+        justify-content: center;
+        position: relative;
+        clip-path: polygon(0 0, 100% 0, 90% 100%, 0 100%);
+        padding: 0px 23px 0px 0px;
+        &.completed {
+            background: #ccc;
+            .tenders-block__status-text {
+                color: #000;
+            }
+        }
+    }
+
+    &__status {
+        padding-top: 10px;
+        text-align: center;
+        color: #fff;
+    }
+
+    &__status-text {
+        font-size: 16px;
+        line-height: 20px;
+        margin-bottom: 24px;
+    }
+
+    &__status-num {
+        font-size: 100px;
+        line-height: 64px;
+    }
+
+    &__info {
+        padding: 20px 95px 24px 24px;
+        position: relative;
+        flex: 1 1 auto;
+        &.active {
+            &:after {
+                content: "";
+                width: 86%;
+            }
+        }
+        &:after {
+            content: "";
+            transition: width 0.5s;
+            position: absolute;
+            left: 24px;
+            bottom: 0;
+            width: 0;
+            height: 1px;
+            background: #ccc;
+        }
+    }
+
+    &__date {
+        font-size: 16px;
+        line-height: 20px;
+        font-family: $rfb;
+        margin-bottom: 16px;
+        color: #a0a0a0;
+    }
+
+    &__text {
+        font-size: 16px;
+        line-height: 20px;
+        font-family: $rfb;
+        margin-bottom: 16px;
+    }
+
+    &__row {
+        display: flex;
+    }
+    &__row-item {
+        flex: 0 0 288px;
+        font-size: 16px;
+        line-height: 20px;
+        color: #a0a0a0;
+        &:first-child {
+            margin-right: 24px;
+        }
+        span {
+            display: block;
+            font-family: $rfb;
+        }
+    }
+    &__hide {
+        margin-left: 312px;
+        // &.active {
+        //     border-top: 1px solid #cccccc;
+        // }
+        .tenders-block__row-item {
+            margin-top: 18px;
+        }
+    }
+    &__list {
+        display: flex;
+        margin-top: 14px;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        max-width: 806px;
+        li {
+            flex: 0 0 48.7%;
+            margin-bottom: 16px;
+        }
+    }
+    &__list-link {
+        font-size: 16px;
+        line-height: 20px;
+        color: #000;
+        text-decoration: underline;
+    }
+    @media (max-width: $md1+px) {
+        &__info {
+            padding: 20px 95px 50px 24px;
+        }
+    }
+    @media (max-width: $md2+px) {
+        padding-bottom: 50px;
+        &__wrap {
+            flex-wrap: wrap;
+            padding-top: 40px;
+        }
+
+        &__item {
+            clip-path: none;
+            padding: 0;
+            background: none;
+            position: static;
+            flex: 0 0 100%;
+            &.completed {
+                background: none;
+                .tenders-block__status-text {
+                    color: #fff;
+                }
+                .tenders-block__status-text {
+                    background: #a0a0a0;
+                }
+            }
+        }
+        &__status {
+            padding: 0;
+        }
+        &__status-num {
+            color: #a0a0a0;
+            font-size: 70px;
+            line-height: 72px;
+        }
+        &__status-text {
+            position: absolute;
+            left: 0;
+            top: 0;
+            background: #58585a;
+            width: 125px;
+            height: 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 14px;
+            line-height: 16px;
+            clip-path: polygon(0 0, 100% 0, 95% 100%, 0 100%);
+        }
+
+        &__date {
+            position: absolute;
+            right: 0;
+            top: 0;
+            width: calc(100% - 125px);
+            height: 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 0px 36px;
+            font-size: 14px;
+            line-height: 16px;
+        }
+        &__info {
+            position: static;
+            padding: 0px 16px 0px;
+            &.active {
+                &:after {
+                    content: "";
+                    display: none;
+                }
+                .tenders-block__row {
+                    padding: 0px 0px 13px 0px;
+                    border-bottom: 1px solid #ccc;
+                }
+            }
+        }
+        &__text {
+            text-align: center;
+        }
+        &__hide {
+            margin: 0;
+            padding: 0px 16px;
+            .tenders-block__row-item {
+                margin-top: 11px;
+            }
+        }
+    }
+    @media (max-width: $md3+px) {
+        &__row {
+            display: block;
+        }
+        &__row-item {
+            margin: 0px 0px 16px 0px;
+            &:last-child {
+                margin: 0px 0px 0px 0px;
+            }
+        }
+        &__hide {
+            margin: 0;
+            padding: 0px 16px;
+            &.active {
+                // padding-bottom: 50px;
+            }
+        }
+    }
+    @media (max-width: 576px) {
+        &__status-num {
+            font-size: 44px;
+            line-height: 50px;
+        }
+        &__text {
+            font-size: 14px;
+            line-height: 16px;
+        }
+        &__row-item {
+            font-size: 14px;
+            line-height: 16px;
+        }
+        &__list {
+            li {
+                flex: 0 0 100%;
+            }
+        }
+        &__list-link {
+            font-size: 14px;
+            line-height: 16px;
+        }
+    }
+}
+
+.mob-search {
+    display: none;
+    &.active {
+        display: block;
+    }
+    &__row {
+        display: flex;
+        justify-content: space-between;
+        margin: 25px 0px;
+    }
+    &__back {
+        width: 26px;
+        height: 21px;
+        background: url("../img/tenders/back.svg") 0 0 / contain no-repeat;
+    }
+    &__reset {
+        font-size: 14px;
+        line-height: 16px;
+        background: none;
+    }
+}

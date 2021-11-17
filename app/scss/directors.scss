@@ -1,0 +1,261 @@
+@keyframes show {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.work-cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 24px;
+    padding: 0px 0px 95px 0px;
+    @media (max-width: $md1+px) {
+        display: block;
+    }
+    @media (max-width: $md2+px) {
+        padding: 0px 0px 36px 0px;
+    }
+    @media (max-width: 576px) {
+        padding: 0px 0px 16px 0px;
+        .show-btn {
+            opacity: 1;
+        }
+    }
+}
+.work-card {
+    background: #ffffff;
+    box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.08);
+    min-height: 300px;
+    position: relative;
+    cursor: pointer;
+    &:hover .show-btn {
+        opacity: 1;
+    }
+    &:hover .show-btn__icon {
+        &:before {
+            content: "";
+            transform: translate(-50%, -50%) rotate(90deg);
+        }
+        &:after {
+            content: "";
+            transform: translate(-50%, -50%) rotate(90deg);
+        }
+    }
+    .show-btn {
+        &.active {
+            .show-btn__icon {
+                &:before {
+                    content: "";
+                    transform: translate(-50%, -50%) rotate(45deg);
+                }
+                &:after {
+                    content: "";
+                    transform: translate(-50%, -50%) rotate(45deg);
+                }
+            }
+        }
+    }
+    &:before {
+        content: "";
+        width: 192px;
+        height: 192px;
+        position: absolute;
+        right: 0px;
+        bottom: -12px;
+        background: url(../img/directors/bg.png) 0 0 / contain no-repeat;
+    }
+    &__wrap {
+        display: flex;
+    }
+    &.big {
+        grid-column: span 2;
+        &:before {
+            width: 264px;
+            height: 264px;
+        }
+        .work-card__show-info {
+            padding-left: 320px;
+        }
+    }
+    &__wrap {
+        display: none;
+        &.active {
+            display: flex;
+        }
+    }
+    .work-card__show-info {
+        padding: 20px;
+        position: relative;
+        z-index: 2;
+        color: #000000;
+        font-size: 16px;
+        line-height: 20px;
+        display: none;
+        transition: opacity 0.7s;
+        &.active {
+            display: block;
+            animation: show 0.7s;
+        }
+    }
+    .work-card__show-title {
+        font-family: $rfb;
+        margin: 0px 0px 20px 0px;
+    }
+    .work-card__show-pos {
+        margin: 0px 0px 20px 0px;
+    }
+    .work-card__show-text {
+        p {
+            margin: 0px 0px 20px 0px;
+        }
+    }
+    &.manag {
+        &:before {
+            right: 0;
+            bottom: -4px;
+            background: url(../img/directors/bg2.png) 0 0 / contain no-repeat;
+        }
+    }
+    &__photo {
+        flex: 0 0 320px;
+        height: 300px;
+        margin: 0px 8px 0px 0px;
+        overflow: hidden;
+        clip-path: polygon(0 0, 100% 0%, 84% 100%, 0% 100%);
+        // &:before {
+        //     content: "";
+        //     position: absolute;
+        //     right: -122px;
+        //     top: 0;
+        //     width: 50%;
+        //     height: 122%;
+        //     background: #fff;
+        //     z-index: 2;
+        //     transform: rotate(8deg);
+        // }
+        &_forbig {
+            width: 320px;
+            height: 300px;
+            position: absolute;
+            left: 0px;
+            top: 0px;
+        }
+    }
+
+    &__info {
+        padding: 35px 0px 0px 0px;
+        position: relative;
+        z-index: 2;
+        // display: none;
+        // &.active {
+        //     display: block;
+        //     animation: show 0.7s;
+        // }
+    }
+
+    &__name {
+        font-size: 28px;
+        line-height: 34px;
+        letter-spacing: -0.02em;
+        max-width: 400px;
+        font-family: $rfb;
+        margin: 0px 0px 7px 0px;
+        max-width: 125px;
+    }
+
+    &__pos {
+        font-size: 16px;
+        line-height: 20px;
+    }
+
+    &__text {
+        font-size: 16px;
+        line-height: 20px;
+        color: #a0a0a0;
+        font-family: $rfb;
+        margin: 36px 0px 0px 0px;
+        padding: 0px 0px 0px 50px;
+        position: relative;
+        &:before {
+            content: "";
+            position: absolute;
+            left: 0px;
+            top: -10px;
+            width: 25px;
+            height: 20px;
+            background: url(../img/directors/icon.png) 0 0 / contain no-repeat;
+        }
+    }
+    @media (max-width: $md1+px) {
+        margin: 0px 0px 24px 0px;
+        &.big {
+            .work-card__show-info {
+                padding-left: 20px;
+            }
+        }
+        &__photo_forbig {
+            display: none;
+        }
+    }
+    @media (max-width: $md2+px) {
+        &__text {
+            display: none;
+        }
+    }
+    @media (max-width: 576px) {
+        min-height: 216px;
+        overflow: hidden;
+        margin: 0px 15px 24px;
+        &:before {
+            content: "";
+            width: 175px;
+            height: 175px;
+            bottom: -48px;
+        }
+        &.big {
+            &:before {
+                content: "";
+                width: 175px;
+                height: 175px;
+                bottom: -48px;
+            }
+        }
+        &__photo {
+            flex: 0 0 175px;
+            height: 216px;
+        }
+        &__name {
+            font-size: 18px;
+            line-height: 24px;
+            margin: 0px 0px 13px 0px;
+        }
+        &__pos {
+            font-size: 14px;
+            line-height: 16px;
+            max-width: 135px;
+        }
+        &__info {
+            padding: 15px 0px 0px 0px;
+        }
+    }
+}
+.directors {
+    position: relative;
+    z-index: 1;
+    &__block {
+        &.active {
+            display: grid;
+        }
+    }
+    @media (max-width: 576px) {
+        .mob-tabs-title {
+            padding: 0px 0px 0px 10px;
+        }
+        &__content {
+            padding: 0;
+        }
+    }
+}

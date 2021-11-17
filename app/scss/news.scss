@@ -1,0 +1,456 @@
+@keyframes scale-icon {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.news-page {
+    padding: 0px 0px 90px 0px;
+    position: relative;
+    &__mess {
+        position: fixed;
+        right: 0;
+        top: 48%;
+        width: 79px;
+        height: 48px;
+        background: $col1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .watc-all {
+        margin: 0px 0px 48px 0px;
+    }
+    &__content {
+        padding-top: 24px;
+    }
+    &__block {
+        margin: 0px 0px 56px 0px;
+        display: none;
+        &.active {
+            display: block;
+        }
+    }
+    &__year {
+        width: 100%;
+    }
+    &__item {
+        display: flex;
+        min-height: 228px;
+        box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.12);
+        margin: 0px 0px 24px 0px;
+        position: relative;
+        &:hover {
+            .news-page__buttons {
+                opacity: 1;
+            }
+        }
+        &:last-child {
+            margin: 0px 0px 0px 0px;
+        }
+    }
+    &__buttons {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        transition: all 0.3s;
+        display: flex;
+        opacity: 0;
+        button {
+            opacity: 1;
+            position: static;
+        }
+    }
+    .show-btn {
+        &:hover .show-btn__icon {
+            &:before {
+                content: "";
+                transform: translate(-50%, -50%) rotate(90deg);
+            }
+            &:after {
+                content: "";
+                transform: translate(-50%, -50%) rotate(90deg);
+            }
+        }
+        &.active {
+            .show-btn__icon {
+                &:before {
+                    content: "";
+                    transform: translate(-50%, -50%) rotate(45deg);
+                }
+                &:after {
+                    content: "";
+                    transform: translate(-50%, -50%) rotate(45deg);
+                }
+            }
+        }
+    }
+    &__share-wrap {
+        margin: 0px 55px 0px 0px;
+        display: flex;
+    }
+    .share-btn {
+        font-size: 16px;
+        line-height: 20px;
+        display: flex;
+        align-items: center;
+        background: #fff;
+        &__icon {
+            width: 48px;
+            height: 48px;
+            background: #000;
+            margin: 0px 0px 0px 23px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: all 0.3s;
+            img {
+                display: block;
+                &:hover {
+                    animation: scale-icon 0.5s;
+                }
+            }
+        }
+    }
+    &__photo {
+        flex: 0 0 288px;
+        height: 228px;
+        margin: 0px 24px 0px 0px;
+        background: url(../img/news/sound2.svg) center center/contain no-repeat;
+        background-size: auto 80%;
+        clip-path: polygon(0 0, 100% 0, 90% 100%, 0% 100%);
+
+        &.gray {
+            background: #ccc;
+        }
+    }
+
+    &__info {
+        flex: 1 1 auto;
+        color: #000;
+        padding: 0px 24px 55px 0px;
+    }
+
+    &__date {
+        clip-path: polygon(8% 0, 100% 0%, 92% 100%, 0% 100%);
+        background: $col1;
+        width: 115px;
+        height: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #000;
+        font-family: $rfb;
+        margin: 0px 0px 16px 0px;
+    }
+
+    &__title {
+        font-size: 28px;
+        line-height: 34px;
+        font-family: $rfb;
+        margin: 0px 0px 10px 0px;
+    }
+
+    &__text {
+        color: #000;
+    }
+
+    &__hide-text {
+        margin: 0px 0px 0px 0px;
+        height: 0;
+        overflow: hidden;
+        transition: all 0.3s;
+        p {
+            margin: 0px 0px 12px 0px;
+            &:first-child {
+                margin-top: 12px;
+            }
+            &:last-child {
+                margin: 0px 0px 0px 0px;
+            }
+        }
+    }
+    @media (max-width: $md2+px) {
+        &__buttons {
+            opacity: 1;
+        }
+    }
+    @media (max-width: $md3+px) {
+        &__mess {
+            // display: none;
+            z-index: 3;
+        }
+        &__item {
+            display: block;
+        }
+        &__photo {
+            margin: 0px 0px 0px 0px;
+            clip-path: none;
+        }
+        &__date {
+            clip-path: polygon(0% 0, 100% 0, 92% 100%, 0 100%);
+            margin: 0px 0px 20px 0px;
+            transform: translateX(-16px);
+        }
+        &__info {
+            padding: 0 16px 55px;
+        }
+        &__title {
+            font-size: 24px;
+            line-height: 28px;
+        }
+        &__text {
+            font-size: 14px;
+            line-height: 16px;
+        }
+    }
+    @media (max-width: 576px) {
+        padding: 0px 0px 40px 0px;
+        .share-btn {
+            display: none;
+        }
+        .show-btn {
+            margin-left: auto;
+        }
+        &__text {
+            font-family: $rfr;
+            font-size: 14px;
+            line-height: 16px;
+        }
+        &__hide-text {
+            font-family: $rfr;
+            p {
+                font-size: 14px;
+                line-height: 16px;
+            }
+
+            &.active {
+                margin: 0px 0px 20px 0px;
+            }
+        }
+        &__date {
+            font-size: 14px;
+            line-height: 16px;
+            width: 124px;
+        }
+        &__info {
+            padding-bottom: 60px;
+        }
+        &__title {
+            font-size: 14px;
+            line-height: 16px;
+        }
+        &__buttons {
+            display: block;
+        }
+        &__mess {
+            display: none;
+        }
+        .year:before {
+            width: 110%;
+        }
+    }
+    @media (max-width: $md4+px) {
+        &__photo {
+            height: 170px;
+        }
+    }
+}
+.social-icons {
+    display: flex;
+    width: 0px;
+    overflow: hidden;
+    transition: all 0.3s;
+    border: 1px solid #000;
+    &.for-mob {
+        display: none;
+    }
+    &__link {
+        width: 48px;
+        height: 46px;
+        padding: 12px 8px;
+        transition: all 0.3s;
+        &:nth-child(1),
+        &:nth-child(2),
+        &:nth-child(3),
+        &:nth-child(4) {
+            border-right: 1px solid #000;
+        }
+        &:hover {
+            background: #000;
+            svg {
+                fill: #fff;
+            }
+            .mess {
+                stroke: #ffff;
+                fill: none;
+            }
+        }
+    }
+    svg {
+        max-width: 100%;
+        max-height: 100%;
+        fill: #000;
+        transition: all 0.3s;
+    }
+    .mess {
+        stroke: #000;
+        fill: none;
+    }
+    @media (max-width: 576px) {
+        width: auto;
+        display: none;
+        &.for-mob {
+            display: flex;
+            margin: 40px auto 0;
+            max-width: 375px;
+            border: none;
+            justify-content: space-between;
+        }
+        &__link {
+            width: 40px;
+            height: 40px;
+            padding: 10px 6px;
+            border: 1px solid #000;
+        }
+    }
+}
+
+.news-form {
+    width: 395px;
+    position: fixed;
+    background: #fff;
+    box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.12);
+    top: 48%;
+    right: 0;
+    transition: all 0.5s;
+    transform: translateX(110%);
+    z-index: 3;
+
+    &.active {
+        transform: translateX(0);
+    }
+    &__close {
+        width: 24px;
+        height: 24px;
+        position: absolute;
+        top: 12px;
+        right: 12px;
+        background: url("../img/icons/close-form.svg") 0 0 / contain no-repeat;
+    }
+    &__title {
+        height: 48px;
+        font-size: 16px;
+        line-height: 20px;
+        display: flex;
+        align-items: center;
+        background: $col1;
+        color: #000;
+        font-family: $rfb;
+        position: relative;
+        padding: 0px 0px 0px 55px;
+    }
+    &__wrap {
+        padding: 12px;
+    }
+    &__input {
+        padding: 3px 0px;
+        border-bottom: 0.5px solid #a0a0a0;
+        margin: 0px 0px 10px 0px;
+        input {
+            font-size: 16px;
+            line-height: 20px;
+            color: #000;
+            width: 100%;
+            &::placeholder {
+                color: #a0a0a0;
+            }
+        }
+    }
+    .check-label {
+        font-size: 12px;
+        line-height: 20px;
+        color: #000;
+        padding: 0px 0px 0px 28px;
+        margin: 0px 0px 42px 0px;
+    }
+    .check-style {
+        border: 1px solid #000;
+    }
+    &__button {
+        display: flex;
+        align-items: center;
+        background: none;
+        margin-left: auto;
+        &:hover {
+            .mess {
+                stroke: #000;
+                fill: #fff;
+            }
+        }
+    }
+    &__button-text {
+        font-size: 16px;
+        line-height: 20px;
+        margin: 0px 24px 0px 0px;
+    }
+    &__button-icon {
+        height: 48px;
+        width: 48px;
+        background: #000;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .mess {
+            stroke: #fff;
+            transition: all 0.3s;
+        }
+    }
+    @media (max-width: 576px) {
+        position: static;
+        transform: none;
+        max-width: 395px;
+        width: auto;
+        margin: 0px auto;
+        box-shadow: none;
+        &__title {
+            height: auto;
+            background: none;
+            padding: 0;
+            margin: 0px 0px 10px 0px;
+        }
+        &__wrap {
+            padding: 0;
+        }
+        &__close {
+            display: none;
+        }
+        &__input {
+            input {
+                font-size: 14px;
+                line-height: 16px;
+                margin: 0px 0px 24px 0px;
+            }
+        }
+        .check-label {
+            margin: 0px 0px 24px 0px;
+            padding: 0px 0px 0px 24px;
+        }
+        &__button-text {
+            font-size: 14px;
+            line-height: 16px;
+            margin: 0px 8px 0px 0px;
+        }
+        &__button-icon {
+            width: 40px;
+            height: 40px;
+            padding: 7px 6px;
+        }
+    }
+}

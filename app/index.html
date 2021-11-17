@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('_head.html')
+
+<body id="body">
+    <div class="wrapper">
+        @@include('_header.html',{})
+        <!-- @@include('_form.html',{}) -->
+
+        <main class="page">
+            <button class="lok">
+                <span class="lok__text">
+                    Расположение
+                </span>
+                <span class="lok__icon-wrap">
+                    <svg class="lok__icon">
+                        <use xlink:href="img/sprite.svg#lok"></use>
+                    </svg>
+                </span>
+            </button>
+
+            <section class="main swiper-container">
+                <div class="page-map">
+                    <a href="#" class="page-map__adress">
+                        353902, Россия,
+                        Краснодарский край,
+                        г. Новороссийск
+                        ул. Сухумское шоссе, 21
+                    </a>
+                    <svg class="page-map__dott" width="317" height="756" viewBox="0 0 317 756" fill="none"
+                        xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+
+                        <circle class="page-map__circle" cx="121.422" cy="462.687" r="16.187"
+                            transform="rotate(-180 121.422 462.687)" stroke="white" />
+                        <path
+                            d="M113.234 462.465C113.234 458.046 116.816 454.465 121.234 454.465C125.653 454.465 129.234 458.046 129.234 462.465C129.234 466.883 125.653 470.465 121.234 470.465C116.816 470.465 113.234 466.883 113.234 462.465Z"
+                            fill="white" stroke="white" />
+                        <path class="page-map__line" d="M122.047 479.374L122.047 564L118.734 564" stroke="white" />
+
+
+                    </svg>
+                </div>
+                <div class="main__content _container">
+                    <div class="main__info">
+                        <h2 class="main__title">Глубоководный зерновой терминал</h2>
+                        <div class="main__stat stat">
+                            <div class="stat__item">
+                                <div data-max="32" class="stat__num">
+                                    <div class="stat__big-num">
+                                        <span>
+                                            <span class='numscroller' data-min='1' data-max='65' data-delay='5'
+                                                data-increment='5'>65</span>,<span class='numscroller' data-min='1'
+                                                data-max='6' data-delay='1' data-increment='1'>6</span></span>
+                                    </div>
+                                    млн <br> долл.
+                                </div>
+
+                                <div class="stat__text">EBITDA в 2020 году</div>
+                            </div>
+                            <div class="stat__item">
+                                <div data-max="6" class="stat__num">
+                                    <div class="stat__big-num"><span>
+                                            <span class='numscroller' data-min='1' data-max='5' data-delay='1'
+                                                data-increment='1'>5</span>
+                                            <span class='numscroller' data-min='1' data-max='123' data-delay='2'
+                                                data-increment='3'>123</span></span></div>тыс.<br> тонн
+                                </div>
+                                <div class="stat__text">побъем перевалки зерна в 2019 году</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="main__info">
+                        <h2 class="main__title">Глубоководный зерновой терминал</h2>
+                        <div class="main__stat stat">
+                            <div class="stat__item only-pc">
+                                <div class="stat__num">
+                                    <div class="stat__big-num"><span class="integer">
+                                            <span class='numscroller' data-min='1' data-max='6' data-delay='1'
+                                                data-increment='1'>6</span>
+                                            000 000</span>
+                                    </div>
+                                    тонн
+                                </div>
+                                <div class="stat__text">EBITDA в 2019 году</div>
+                            </div>
+                            <div class="stat__item only-mob">
+                                <div class="stat__num">
+                                    <div class="stat__big-num"><span class='numscroller' data-min='1' data-max='6'
+                                            data-delay='1' data-increment='1'>6</span>
+                                    </div>
+                                    млн. <br>
+                                    тонн
+                                </div>
+                                <div class="stat__text">мощность перевалки зерна</div>
+                            </div>
+                            <div class="stat__item only-pc">
+                                <div class="stat__num">
+                                    <div class="stat__big-num"><span class="integer">
+                                            <span class='numscroller' data-min='1' data-max='220' data-delay='3'
+                                                data-increment='10'>220</span>
+                                            000</span>
+                                    </div>
+                                    тонн
+                                </div>
+                                <div class="stat__text">вместимость силосов</div>
+                            </div>
+                            <div class="stat__item only-mob">
+                                <div class="stat__num">
+                                    <div class="stat__big-num"><span class='numscroller' data-min='1' data-max='220'
+                                            data-delay='10' data-increment='3'>220</span>
+                                    </div>
+                                    тыс. <br>
+                                    тонн
+                                </div>
+                                <div class="stat__text">вместимость силосов</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="main__info">
+                        <h2 class="main__title">Глубоководный зерновой терминал</h2>
+                        <div class="main__stat stat">
+                            <div class="stat__item">
+                                <div class="stat__num">
+                                    <div class="stat__big-num"><span class='numscroller' data-min='1' data-max='150'
+                                            data-delay='3' data-increment='10'>150</span>
+                                    </div>
+                                </div>
+                                <div class="stat__text"><span>вагонов в сутки</span>
+                                    железнодорожный прием</div>
+                            </div>
+                            <div class="stat__item">
+                                <div class="stat__num">
+                                    <div class="stat__big-num"><span class='numscroller' data-min='1' data-max='600'
+                                            data-delay='3' data-increment='10'>600</span>
+                                    </div>
+
+                                </div>
+                                <div class="stat__text"><span>зерновозов в сутки
+                                    </span> автомобильный прием</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="main__wrapper swiper-wrapper">
+                    <div class="main__slide _ibg swiper-slide">
+
+                        <img class="main__bg" src="img/main/01.jpg" alt="" />
+                    </div>
+                    <div class="main__slide _ibg swiper-slide">
+
+                        <img src="img/main/02.jpg" alt="" />
+                    </div>
+                    <div class="main__slide _ibg swiper-slide">
+
+                        <img src="img/main/04.jpg" alt="" />
+                    </div>
+                </div>
+                <!-- Add Pagination -->
+                <div class="_container">
+                    <div class="slider-pagging">
+                        <div class="swiper-button-prev"></div>
+                        <div class="swiper-pagination"></div>
+                        <!-- Add Arrows -->
+                        <div class="swiper-button-next"></div>
+                    </div>
+                </div>
+            </section>
+            <section class="news">
+                <div class='_container'>
+                    <div class="news__row">
+                        <h2 class="news__title _title">Новости</h2>
+                        <a href="news.html" class="news__button watch-all">Смотреть все
+                            <span>
+                                <svg class="view">
+                                    <use xlink:href="img/sprite.svg#view"></use>
+                                </svg>
+                                <svg class="close-view">
+                                    <use xlink:href="img/sprite.svg#close-eays"></use>
+                                </svg>
+                            </span>
+                        </a>
+                    </div>
+                </div>
+                <div class="news__content _container">
+                    <div class="news__block news-slider swiper-container">
+                        <div class="swiper-wrapper">
+                            <div class="news__card swiper-slide">
+                                <div class="news__item">
+                                    <div class="news__date">26.10.2020</div>
+                                    <h3 class="news__card-title">КСК бьет рекорды по выгрузке вагонов за сутки</h3>
+                                    <div class="news__card-text">
+                                        В октябре 2020 года лаборатория АО «КСК», зернового терминала ООО «ДелоПортс»,
+                                        входящего
+                                        в
+                                        состав крупнейшего в России транспортно-логистического холдинга Группа компаний
+                                        «Дело»,
+                                        подтвердила свое право нахождения в реестре GAFTA
+                                    </div>
+                                    <a href="news.html#one" class="news__button news__card-btn" data-news="1">Подробнее
+                                        <span>
+                                            <svg class="view">
+                                                <use xlink:href="img/sprite.svg#next"></use>
+                                            </svg>
+                                        </span>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="news__card swiper-slide">
+                                <div class="news__item">
+                                    <div class="news__date">26.10.2020</div>
+                                    <h3 class="news__card-title">КСК бьет рекорды по выгрузке вагонов за сутки</h3>
+                                    <div class="news__card-text">
+                                        В октябре 2020 года лаборатория АО «КСК», зернового терминала ООО «ДелоПортс»,
+                                        входящего
+                                        в
+                                        состав крупнейшего в Роccии транспортно-логистического холдинга Группа компаний
+                                        «Дело»,
+                                        подтвердила свое право нахождения в реестре GAFTA
+                                    </div>
+                                    <a href="news.html#two" data-news="2" class="news__button news__card-btn">Подробнее
+                                        <span> <svg class="view">
+                                                <use xlink:href="img/sprite.svg#next"></use>
+                                            </svg></span>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="news__card swiper-slide">
+                                <div class="news__item">
+                                    <div class="news__date">26.10.2020</div>
+                                    <h3 class="news__card-title">КСК бьет рекорды по выгрузке вагонов за сутки</h3>
+                                    <div class="news__card-text">
+                                        В октябре 2020 года лаборатория АО «КСК», зернового терминала ООО «ДелоПортс»,
+                                        входящего
+                                        в
+                                        состав крупнейшего в России транспортно-логистического холдинга Группа компаний
+                                        «Дело»,
+                                        подтвердила свое право нахождения в реестре GAFTA
+                                    </div>
+                                    <a href="news.html#three" data-news="3"
+                                        class="news__button news__card-btn">Подробнее
+                                        <span> <svg class="view">
+                                                <use xlink:href="img/sprite.svg#next"></use>
+                                            </svg></span>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="news__card swiper-slide">
+                                <div class="news__item">
+                                    <div class="news__date">26.10.2020</div>
+                                    <h3 class="news__card-title">КСК бьет рекорды по выгрузке вагонов за сутки</h3>
+                                    <div class="news__card-text">
+                                        В октябре 2020 года лаборатория АО «КСК», зернового терминала ООО «ДелоПортс»,
+                                        входящего
+                                        в
+                                        состав крупнейшего в России транспортно-логистического холдинга Группа компаний
+                                        «Дело»,
+                                        подтвердила свое право нахождения в реестре GAFTA
+                                    </div>
+                                    <a href="news.html#fourth" data-news="4"
+                                        class="news__button news__card-btn">Подробнее
+                                        <span> <svg class="view">
+                                                <use xlink:href="img/sprite.svg#next"></use>
+                                            </svg></span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Add Pagination -->
+
+                    </div>
+                    <div class="_container">
+                        <div class="slider-pagging">
+                            <div class="swiper-button-prev"></div>
+                            <div class="swiper-pagination"></div>
+                            <!-- Add Arrows -->
+                            <div class="swiper-button-next"></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="about">
+                <div class='_container'>
+                    <h2 class="about__title _title">
+                        О компании
+                    </h2>
+                    <ul class="about__list">
+                        <li>
+                            Глубоководный зерновой терминал компании ДелоПортс, мощностью 6,0 млн тонн в год,
+                            осуществляющий перевалку грузов в порту Новороссийск.
+                        </li>
+                        <li>
+                            Третий по величине зерновой терминал в черноморском регионе России, запущен в эксплуатацию в
+                            2010 году.
+                        </li>
+                        <li>
+                            Помимо насыпных терминал осуществляет перевалку генеральных и Ро-Ро грузов.
+                        </li>
+                        <li>
+                            Клиентами компании являются крупнейшие международные и российские компании.
+                        </li>
+                    </ul>
+                    <ul class="about__block stat">
+                        <li class="stat__item">
+                            <div class="stat__num">
+                                <div class="stat__big-num">
+                                    <span class="spincrement">
+                                        <span class='numscroller' data-min='1' data-max='3' data-delay='1'
+                                            data-increment='1'>3</span>,<span class='numscroller' data-min='1'
+                                            data-max='6' data-delay='1' data-increment='1'>6
+                                </div>
+                                <div>
+                                    млн <br>
+                                    тонн
+                                </div>
+                            </div>
+                            <div class="stat__text">объем перевалки зерна в 2019 году</div>
+                        </li>
+                        <li class="stat__item">
+                            <div class="stat__num">
+                                <div class="stat__big-num"><span class="spincrement">
+                                        <span class='numscroller' data-min='1' data-max='30' data-delay='1'
+                                            data-increment='1'>30</span>,<span>4%</span>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="stat__text">доля рынка КСК
+                                в зерновом экспорте Новороссийска в 2019 году</div>
+                        </li>
+                        <li class="stat__item">
+                            <div class="stat__num">
+                                <div class="stat__big-num"><span class="spincrement">
+                                        <span class='numscroller' data-min='1' data-max='44' data-delay='1'
+                                            data-increment='1'>44</span>,<span class='numscroller' data-min='1'
+                                            data-max='9' data-delay='1' data-increment='1'>9</span>
+                                    </span></div>млн <br> долл.
+                            </div>
+                            <div class="stat__text">EBITDA в 2019 году</div>
+                        </li>
+                        <li class="stat__item">
+                            <div class="stat__num">
+                                <div class="stat__big-num"><span class='numscroller' data-min='1' data-max='6'
+                                        data-delay='1' data-increment='1'>6</span>
+                                </div>
+                                млн<br>
+                                тонн
+                            </div>
+                            <div class="stat__text">пропускная способность терминала</div>
+                        </li>
+                        <li class="stat__item">
+                            <div class="stat__num">
+                                <div class="stat__big-num"><span class='numscroller' data-min='1' data-max='220'
+                                        data-delay='5' data-increment='10'>220</span>
+                                </div>
+                                тыс. <br> тонн
+                            </div>
+                            <div class="stat__text">вместимость силосов</div>
+                        </li>
+                        <li class="stat__item">
+                            <div class="stat__num">
+                                <div class="stat__big-num"><span class='numscroller' data-min='1' data-max='600'
+                                        data-delay='5' data-increment='10'>600</span>
+                                </div>
+                            </div>
+                            <div class="stat__text">зерновозов в сутки — автоприем</div>
+                        </li>
+
+                    </ul>
+                </div>
+            </section>
+            <section class="terminal">
+                <div class='terminal__content _container'>
+                    <div class="terminal__icon">
+                        <svg>
+                            <use xlink:href="img/sprite.svg#anchor"></use>
+                        </svg>
+                    </div>
+                    <div class="terminal__num">
+                        №40а
+                    </div>
+                    <div class="terminal__num-text">
+                        Глубоководный зерновой терминал Группы компаний «Дело»
+                    </div>
+                    <a href class="terminal__button">
+                        Подробнее
+                        <span>
+                            <svg class="more">
+                                <use xlink:href="img/sprite.svg#more"></use>
+                            </svg>
+                        </span>
+                    </a>
+                </div>
+            </section>
+            <section class="media">
+                <div class='media__content _container'>
+                    <!-- ДОБАВИЛ ОБЕРТКУ И КНОПКУ -->
+                    <div class="media__wrap">
+                        <h2 class="media__title _title">Медиа</h2>
+                        <button class="watch-all">Смотреть все
+                            <span>
+                                <svg class="view">
+                                    <use xlink:href="img/sprite.svg#view"></use>
+                                </svg>
+                                <svg class="close-view">
+                                    <use xlink:href="img/sprite.svg#close-eays"></use>
+                                </svg>
+                            </span>
+                        </button>
+                    </div>
+                    <div class="media__block">
+                        <div class="media__column">
+                            <div class="media__item">
+                                <a href="media.html" data-tab="0" class="media__item-photo _ibg">
+                                    <img src="img/media/01.jpg" alt="" />
+                                </a>
+                                <div class="media__buttons">
+                                    <a href="#" class="media__button big"><span>Фотогалерея</span></a>
+                                    <a href="#" class="media__button">42 фото</a>
+                                </div>
+                                <a href="media.html" data-tab="0" class="media__item-link"></a>
+                            </div>
+                        </div>
+                        <div class="media__column">
+                            <div class="media__item">
+                                <a href="media.html" data-tab="1" class="media__item-photo _ibg">
+                                    <img src="img/media/02.jpg" alt="" />
+                                </a>
+                                <div class="media__buttons">
+                                    <a href="#" class="media__button big"><span>Видео</span></a>
+                                    <a href="#" class="media__button">5 видео</a>
+                                </div>
+                                <a href="media.html" data-tab="1" class="media__item-link"></a>
+                            </div>
+                        </div>
+                        <div class="media__column">
+                            <div class="media__item">
+                                <a href="media.html" data-tab="2" class="media__item-photo _ibg">
+                                    <img src="img/media/03.jpg" alt="" />
+                                </a>
+                                <div class="media__buttons">
+                                    <a href="#" class="media__button big"><span>Презентация</span></a>
+                                    <a href="#" class="media__button">5,4 Мб</a>
+                                </div>
+                                <a href="media.html" data-tab="2" class="media__item-link"></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+        @@include('_footer.html',{})
+    </div>
+    @@include('_js.html',{})
+
+</body>
+
+</html>

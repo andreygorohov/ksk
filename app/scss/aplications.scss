@@ -1,0 +1,176 @@
+.aplications {
+    &__wrapper {
+        display: flex;
+        margin: 75px 0px 90px;
+    }
+    .slider-nav {
+        display: none;
+        transform: translateY(-50%);
+        &.active {
+            display: flex;
+        }
+    }
+    &-tab {
+        display: none;
+        &.active {
+            display: block;
+        }
+    }
+    @media (max-width: $md1+px) {
+        &__wrapper {
+            flex-direction: column;
+            margin: 35px 0px 20px;
+        }
+        .slider-nav {
+            margin: 36px auto 0px;
+        }
+    }
+    @media (max-width: $md3+px) {
+        .slider-nav {
+            margin: 21px auto 0px;
+        }
+    }
+    @media (max-width: 576px) {
+        .mob-tabs-title {
+            padding: 0;
+        }
+    }
+}
+.aplications-table {
+    margin: 20px 0px 48px;
+    &__titles {
+        display: flex;
+        align-items: flex-end;
+        margin: 0px 0px 32px 0px;
+        font-size: 16px;
+        line-height: 20px;
+        color: #000;
+    }
+
+    &__title {
+        flex: 0 0 20%;
+        font-size: 16px;
+        line-height: 20px;
+        font-family: $rfb;
+        padding: 0px 40px 0px 0px;
+    }
+
+    &__row {
+        display: flex;
+        align-items: center;
+        padding: 35px 0px;
+        border-top: 1px solid #ccc;
+    }
+    &__column {
+        flex: 0 0 20%;
+        padding: 0px 24px 0px 0px;
+    }
+
+    &__date {
+        font-size: 16px;
+        line-height: 20px;
+        color: #a0a0a0;
+        span {
+            display: block;
+        }
+    }
+
+    &__name {
+    }
+
+    &__num {
+    }
+
+    &__status {
+        color: #a0a0a0;
+        padding: 0px 0px 0px 36px;
+        position: relative;
+        &.process {
+            &:before {
+                content: "";
+                background: #a0a0a0 url(../img/aplic/02.svg) center center/70% auto no-repeat;
+            }
+        }
+        &:before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            background: $col1 url(../img/aplic/01.svg) center center/60% auto no-repeat;
+        }
+    }
+
+    @media (max-width: $md2+px) {
+        overflow-x: auto;
+        &__title {
+            padding: 0px 20px 0px 0px;
+        }
+        &__titles {
+            width: 950px;
+        }
+        &__row {
+            width: 950px;
+        }
+    }
+    @media (max-width: $md3+px) {
+        margin-top: 0;
+        &__titles {
+            margin: 0px 0px 24px 0px;
+        }
+        &__title {
+            font-size: 12px;
+            line-height: 16px;
+            padding: 0px 10px 0px 0px;
+        }
+        &__row {
+            padding: 19px 0px 5px;
+        }
+        &__date {
+            font-size: 14px;
+            line-height: 16px;
+        }
+        &__name {
+            font-size: 14px;
+            line-height: 16px;
+        }
+        &__num {
+            font-size: 14px;
+            line-height: 16px;
+        }
+        &__status {
+            font-size: 14px;
+            line-height: 16px;
+        }
+        &__column {
+            padding: 0px 10px 0px 0px;
+        }
+    }
+    @media (max-width: 576px) {
+        &__titles,
+        &__row {
+            width: 550px;
+        }
+        &__column,
+        &__title {
+            &:nth-child(1) {
+                flex: 0 0 95px;
+            }
+            &:nth-child(2) {
+                flex: 0 0 120px;
+            }
+            &:nth-child(3) {
+                flex: 0 0 95px;
+            }
+            &:nth-child(4) {
+                flex: 0 0 95px;
+            }
+            &:nth-child(5) {
+                flex: 0 0 150px;
+            }
+        }
+    }
+}

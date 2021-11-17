@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('_head.html')
+
+
+<body id="body">
+    <div class="wrapper">
+        @@include('_header-wh.html',{
+        "link": "5"
+        })
+        <main class="page">
+            <section class="contacts">
+                <div class="contacts__head about-head">
+                    <div class='about-head__content _container'>
+                        <h1 class="about-head__title _title"><span>Контакты</span></h1>
+                        <h1 class="about-head__title _title for-mob"><span>Контакты</span></h1>
+                    </div>
+                    <div class="about-head__bg _ibg">
+                        <img src="img/contacts/bg.jpg" alt="">
+                    </div>
+                    <div class="about-head__bg _ibg for-mob">
+                        <img src="img/contacts/bg2.jpg" alt="">
+                    </div>
+                </div>
+                <div class='_container contacts__content'>
+                    <div class="contacts__row">
+                        <div class="contacts__map">
+                            <span>В эту область загрузить расположение с карт Яндекса.</span>
+                            Загрузить карту с адресом: 353902, Россия, Краснодарский край,
+                            ул. Сухумское шоссе, 21
+                        </div>
+                        <div class="contacts__block">
+                            <div class="contacts__item">
+                                <div class="contacts__text">
+                                    Акционерное общество «Зерновой терминал «КСК» (АО «КСК»)
+                                </div>
+                                <div class="contacts__tel">
+                                    <span>Телефон/факс:</span>
+                                    <a class="contacts__tel-link" href="tel:78617277819"> +7 (8617) 27–78–19</a>
+                                </div>
+                                <div class="contacts__mail">
+                                    <span>E-mail:</span>
+                                    <a class="contacts__mail-link" href="mailto:sekretar@gt-ksk.com">
+                                        sekretar@gt-ksk.com</a>
+                                </div>
+                            </div>
+                            <div class="contacts__item">
+                                <div class="contacts__text">
+                                    Горячая линия по вопросам деловой этики
+                                </div>
+                                <div class="contacts__tel">
+                                    <span>Телефон:</span>
+
+                                    <a class="contacts__tel-link" href="tel:78007002980">+7 (800) 700–29–80</a>
+                                    <div class="contacts__tel-info"> (Звонок по России бесплатно)</div>
+                                </div>
+                                <div class="contacts__mail">
+                                    <span>E-mail:</span>
+                                    <a class="contacts__mail-link" href="mailto:compliance@dcp-holdings.com">
+                                        compliance@dcp-holdings.com</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+        @@include('_footer.html',{})
+    </div>
+    @@include('_js.html',{})
+</body>
+
+</html>

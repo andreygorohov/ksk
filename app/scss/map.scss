@@ -1,0 +1,427 @@
+.map {
+    .tabs__row {
+        display: none;
+    }
+    .tabs__row-item {
+        display: block;
+    }
+    .mob-tabs-title {
+        padding: 0px 0px 0px 16px;
+    }
+    @media (max-width: 576px) {
+        &__wrap {
+            margin-top: -40px;
+        }
+        .tabs__row {
+            display: block;
+        }
+    }
+}
+
+.nutep_map_block_mobile {
+    display: none;
+}
+.nutep_map_block {
+    position: relative;
+    // box-shadow: 0px 8px 12px rgb(0 0 0 / 12%);
+}
+.main_map_map {
+    cursor: pointer;
+}
+.nutep_map_block img {
+    display: block;
+    width: 100%;
+}
+.main_map_map area {
+    position: relative;
+    z-index: 10000000;
+}
+.nutep_inner_map {
+    visibility: hidden;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+}
+.opened .nutep_inner_map {
+    visibility: visible;
+}
+.opened .nutep_map_block_outer {
+    visibility: hidden;
+}
+.nutep_map_block .button_back {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    display: none;
+}
+.nutep_map_block.opened .button_back {
+    display: flex;
+    z-index: 100;
+}
+.nutep_map_text {
+    position: absolute;
+    padding-left: 52px;
+    left: 0;
+}
+.nutep_map_line {
+    position: absolute;
+    top: 65px;
+    right: -17px;
+    width: 0;
+    background: url(../img/map/map_line.png) no-repeat top right;
+    background-size: auto 33px;
+    height: 34px;
+}
+.opened .nutep_map_line {
+    width: calc(100% - 30px);
+    transition: 0.5s;
+    transition-delay: 0.2s;
+}
+.nutep_map_line:before {
+    content: "";
+    position: absolute;
+    bottom: 17px;
+    left: 0px;
+    width: 2px;
+    height: 7px;
+    background: white;
+    opacity: 0.9;
+}
+.nutep_map_title {
+    font-weight: 700;
+    font-size: 64px;
+    line-height: 77px;
+    color: #ffffff;
+    opacity: 0;
+}
+.opened .nutep_map_title {
+    transition: 0.4s;
+    opacity: 1;
+    transition-delay: 0.7s;
+}
+.nutep_map_nums {
+    opacity: 0;
+}
+.opened .nutep_map_nums {
+    transition: 0.5s;
+    opacity: 1;
+    transition-delay: 1.1s;
+}
+.nutep_map_nums {
+    margin-top: 44px;
+}
+.nutep_text_description {
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 34px;
+    color: #ffffff;
+    position: absolute;
+    left: 63%;
+    bottom: 23%;
+    opacity: 0;
+}
+.opened .nutep_text_description {
+    transition: 0.5s;
+    opacity: 1;
+    transition-delay: 1.1s;
+}
+.nutep_map_controls {
+    position: absolute;
+    z-index: 200;
+    top: 48px;
+    right: 48px;
+    display: flex;
+    flex-direction: column;
+}
+.nutep_map_controls a {
+    width: 80px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #ffffff;
+    margin-bottom: 24px;
+}
+.nutep_map_controls a.active,
+.nutep_map_controls a:hover {
+    background: black;
+}
+.nutep_map_controls a.active path,
+.nutep_map_controls a:hover path,
+.nutep_map_controls a.active circle,
+.nutep_map_controls a:hover circle {
+    stroke: white;
+}
+.tabs.mobile_tabs {
+    display: none;
+}
+.map_page {
+    background: #58585a;
+    padding-bottom: 56px;
+}
+.map__stat__items {
+    display: flex;
+}
+.map__stat__items .stat__item {
+    margin-right: 50px;
+    flex: unset;
+}
+.map__stat__items .stat__item:last-child {
+    margin-right: 0px;
+}
+.button {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+}
+.button .svg {
+    width: 48px;
+    min-width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: white;
+    margin-left: 24px;
+}
+.button svg {
+    display: block;
+    transition: 0.2s;
+}
+.button svg * {
+    transition: 0.2s;
+}
+.button_back .svg {
+    margin: 0 24px 0 0;
+}
+@media screen and (max-width: 1199px) {
+    .nutep_text_description {
+        font-size: 24px;
+        line-height: 30px;
+        left: 55%;
+    }
+    .nutep_map_block .num_block span {
+        font-size: 52px;
+    }
+    .nutep_map_block .num_block_text {
+        font-size: 14px;
+    }
+}
+@media screen and (max-width: 991px) {
+    .nutep_map_block_mobile img {
+        max-width: 100%;
+        width: 100%;
+    }
+    .button svg {
+        width: 25px;
+    }
+    .map__stat__items .stat__item {
+        margin-right: 0;
+    }
+    .nutep_map_block_mobile .stat__item:last-child {
+        order: -2;
+        min-width: 60%;
+        margin-right: 0px;
+    }
+    .nutep_map_block_mobile .stat__item:nth-child(2) {
+        order: -1;
+        margin-left: auto;
+        width: 100px;
+    }
+    .map__stat__items {
+        min-width: 100%;
+    }
+    .map__stat__items .stat__item:first-child {
+        margin-right: 0px;
+        margin-left: calc(100% - 100px);
+        width: 100px;
+        margin-top: 30px;
+    }
+    .map__stat__items {
+        flex-wrap: wrap;
+    }
+    .button .svg {
+        width: 40px;
+        min-width: 40px;
+        height: 40px;
+        background: none;
+        margin-left: 5px;
+    }
+    .tabs.mobile_tabs {
+        display: flex;
+    }
+    .button_back span:last-child {
+        display: none;
+    }
+    .map_page {
+        background: none !important;
+        padding-bottom: 0px;
+    }
+    .map_page .inner_page_content {
+        padding-bottom: 0px;
+        margin-bottom: 0px;
+    }
+    .gray .tabs a.active {
+        background: none;
+    }
+    .nutep_map_block {
+        display: none;
+    }
+    .nutep_map_block_mobile {
+        display: block;
+        position: relative;
+    }
+    .nutep_main_map_mobile img {
+        display: block;
+        width: 100%;
+    }
+    .hand_svg {
+        position: absolute;
+        top: 24.5%;
+        left: 47.2%;
+    }
+    .loc_hand_svg {
+        position: absolute;
+        top: 54.5%;
+        left: 47.2%;
+    }
+    .hand_svg {
+        display: block;
+        animation-duration: 1s;
+        animation-name: moveSvgHand;
+        animation-iteration-count: 3;
+        animation-fill-mode: forwards;
+    }
+    @keyframes moveSvgHand {
+        0% {
+            margin-top: 0px;
+        }
+        50% {
+            margin-top: -4px;
+        }
+        100% {
+            margin-top: 0px;
+        }
+    }
+}
+.nutep_inner_map_mobile {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    visibility: hidden;
+    overflow: hidden;
+}
+.opened .nutep_inner_map_mobile {
+    visibility: visible;
+}
+.opened .nutep_main_map_mobile {
+    visibility: hidden;
+}
+.nutep_map_block_mobile .button_back {
+    display: none;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index: 200;
+}
+.nutep_map_block_mobile.opened .button_back {
+    display: flex;
+}
+.nutep_mobile_map_nums {
+    position: absolute;
+    top: 65px;
+    left: 0px;
+    width: 100%;
+    padding: 0 15px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.nutep_map_block_mobile .button_back {
+    color: #58585a;
+}
+.nutep_map_block_mobile .button_back path {
+    stroke: white;
+}
+.nutep_map_block_mobile .w-100 {
+    width: 100%;
+    min-width: 100%;
+}
+.map_text_block_title_mobile {
+    font-size: 28px;
+    line-height: 40px;
+    color: #ffffff;
+    font-weight: 700;
+    margin-bottom: 7px;
+}
+.map_line_mobile {
+    position: absolute;
+    top: -185px;
+    left: 62px;
+    background: url(../img/map/map_line_mobile.png) no-repeat top right;
+    background-size: 34px auto;
+    width: 34px;
+    height: 0px;
+}
+.nutep_map_block_mobile2 .map_line_mobile {
+    top: -125px;
+}
+.map_text_block_title_mobile {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 40px;
+    opacity: 0;
+    display: inline-block;
+    border-top: 1px solid white;
+    margin-bottom: 7px;
+    color: #ffffff;
+}
+.opened .map_line_mobile {
+    height: 186px;
+    transition: 0.5s;
+    transition-delay: 0.2s;
+}
+.nutep_map_block_mobile2.opened .map_line_mobile {
+    height: 126px;
+}
+.opened .map_text_block_title_mobile {
+    transition: 0.4s;
+    opacity: 1;
+    transition-delay: 0.7s;
+}
+.map_text_block_title_mobile {
+    width: 80px;
+}
+.inner_text_description_mobile {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 22px;
+    color: white;
+    opacity: 0;
+}
+.opened .inner_text_description_mobile {
+    transition: 0.5s;
+    opacity: 1;
+    transition-delay: 1.1s;
+}
+.map_text_block_mobile {
+    position: absolute;
+    z-index: 2;
+    left: -80px;
+    color: white;
+    height: 0px;
+    width: 100%;
+    padding: 0 15px 0 0;
+    margin-top: 165px;
+}
+.nutep_map_block_mobile2 .map_text_block_mobile {
+    margin-top: 105px;
+}

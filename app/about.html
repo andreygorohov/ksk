@@ -1,0 +1,611 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('_head.html')
+
+<body id="body">
+    <div class="wrapper">
+        @@include('_header-wh.html',{
+        "link": "1"
+        })
+        <main class="page">
+            <section class="overview">
+                <div class="overview__head about-head">
+                    <div class='about-head__content _container'>
+                        <h1 class="about-head__title _title"><span>Обзор</span></h1>
+                        <!-- добавил -->
+                        <h1 class="about-head__title _title for-mob"><span>О Компании</span></h1>
+                    </div>
+                    <div class="about-head__bg _ibg">
+                        <img src="img/about-head/01.jpg" alt="">
+                    </div>
+                    <!-- добавил -->
+                    <div class="about-head__bg _ibg for-mob">
+                        <img src="img/about-head/02.jpg" alt="">
+                    </div>
+                </div>
+                <div class='_container'>
+                    <!-- добавил -->
+                    <h2 class="mob-tabs-title">Обзор</h2>
+                    <div class="overview__tabs tabs">
+                        <div class="overview__tabs-row tabs__row">
+                            <div class="overview__tabs-row-item tabs__row-item">о кск</div>
+                            <div class="overview__tabs-row-item tabs__row-item">ключевые характеристики</div>
+                        </div>
+                        <div class="overview__tabs-content tabs__content">
+                            <div class="overview__block tabs__content-block">
+                                <div class="tabs__mob-title-wrap">
+                                    <div class="tabs__mob-title">
+                                        <span>о кск</span>
+                                    </div>
+                                </div>
+                                <div class="overview__item">
+                                    <div class="overview__item-photo _ibg"><img src="img/overview/01.jpg" alt=""></div>
+                                    <div class="overview__item-info">
+                                        <h3 class="overview__item-title _sub-title">
+                                            Преимущества
+                                        </h3>
+                                        <div class="overview__item-text _text">
+                                            <p>
+                                                Зерновой терминал КСК имеет уникальную инфраструктуру и предлагает
+                                                комплексные
+                                                логистические решения.
+                                            </p>
+                                            <p>
+                                                Выделенный доступ к железнодорожному транспорту — собственные
+                                                железнодорожные
+                                                пути обеспечивают выгодную логистику для поставщиков зерна.
+                                            </p>
+                                            <p>
+                                                Выделенный прямой доступ к федеральной трассе М-4 «Дон» обеспечивает
+                                                эффективную
+                                                автотранспортную логистику для поставщиков зерна.
+                                            </p>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div class="overview__item dark">
+                                    <div class="overview__item-photo">
+                                        <img src="img/overview/02.jpg" alt="">
+                                    </div>
+                                    <div class="overview__item-info">
+                                        <h3 class="overview__item-title _sub-title">
+                                            Клиенты КСК
+                                        </h3>
+                                        <div class="overview__item-text _text">
+                                            <p>
+                                                Клиентами КСК являются крупнейшие международные и российские компании.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="overview__item">
+                                    <div class="overview__item-photo _ibg"><img src="img/overview/03.jpg" alt=""></div>
+                                    <div class="overview__item-info">
+                                        <h3 class="overview__item-title _sub-title">
+                                            Оборудование
+                                        </h3>
+                                        <div class="overview__item-text _text">
+                                            <p>
+                                                Терминал оснащен высокотехнологичным современным оборудованием от
+                                                ведущих мировых производителей, что обеспечивает бесперебойность всех
+                                                операций: от приема зерна и проверки его качества до погрузки на суда.
+                                            </p>
+
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="overview__block tabs__content-block">
+                                <div class="tabs__mob-title-wrap">
+                                    <div class="tabs__mob-title">
+                                        <span>Ключевые характеристики</span>
+                                    </div>
+                                </div>
+                                <div class="charact">
+                                    <div class="charact__map">
+                                        <ul class="charact__map-stat stat">
+                                            <li class="stat__item black">
+                                                <div class="stat__num">
+                                                    <div class="stat__big-num"><span class='numscroller' data-min='1'
+                                                            data-max='6' data-delay='1' data-increment='1'>6</span>
+                                                    </div>
+                                                    млн <br> тонн
+                                                </div>
+                                                <div class="stat__text">мощность
+                                                    перевалки зерна</div>
+                                            </li>
+                                            <li class="stat__item black">
+                                                <div class="stat__num">
+                                                    <div class="stat__big-num">
+                                                        <span class="spincrement">
+                                                            <span class='numscroller' data-min='1' data-max='12'
+                                                                data-delay='1' data-increment='1'>12</span>,<span
+                                                                class='numscroller' data-min='1' data-max='4'
+                                                                data-delay='1' data-increment='1'>4</span>
+                                                        </span>
+                                                    </div>
+                                                    Га
+                                                </div>
+                                                <div class="stat__text">площадь терминала</div>
+                                            </li>
+                                            <li class="stat__item black">
+                                                <div class="stat__num">
+                                                    <div class="stat__big-num"><span class='numscroller' data-min='1'
+                                                            data-max='220' data-delay='3' data-increment='10'>220</span>
+                                                    </div>
+                                                    тыс. <br> тонн
+                                                </div>
+                                                <div class="stat__text">вместимость силосов</div>
+                                            </li>
+                                        </ul>
+                                        <img src="img/charact/map.png" alt="" />
+                                        <img src="img/charact/mob-map.jpg" class="for-mob" alt="" />
+                                    </div>
+                                    <div class="charact__content">
+                                        <section class="charact__content-block first">
+                                            <div class="figure"></div>
+                                            <svg class="charact__section-num" width="60" height="162"
+                                                viewBox="0 0 60 162" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M43.818 0.647522H43.673L43.5506 0.725045L0.771643 27.8032L0.539062 27.9504V28.2257V58.4895V59.4029L1.30852 58.9107L37.1742 35.9655V160.431V160.931H37.6742H68.6207H69.1207V160.431V1.14752V0.647522H68.6207H43.818Z"
+                                                    stroke="white" />
+                                            </svg>
+
+                                            <div class="charact__content-row first-row">
+                                                <div class="charact__content-wrap first-wrap">
+                                                    <h2 class="charact__content-title">Прием зерновых грузов</h2>
+                                                    <h3 class="charact__content-sub-title ">Автомобильный <br> прием
+                                                    </h3>
+                                                    <!-- поменял местами -->
+                                                    <img class="big-photo" data-aos="fade-left"
+                                                        src="img/charact/auto.png" alt="" />
+                                                    <ul class="charact__content-stat stat">
+                                                        <li class="stat__item">
+                                                            <div class="stat__num">
+                                                                <div class="stat__big-num"><span class='numscroller'
+                                                                        data-min='1' data-max='600' data-delay='3'
+                                                                        data-increment='10'>600</span>
+                                                                </div>
+
+                                                            </div>
+                                                            <div class="stat__text">
+                                                                зерновозов<br>
+                                                                в сутки — автоприем
+                                                            </div>
+                                                        </li>
+                                                        <!-- добавил класс absolute -->
+                                                        <li class="stat__item absolute">
+                                                            <div class="stat__num">
+                                                                <div class="stat__big-num"><span class='numscroller'
+                                                                        data-min='1' data-max='3' data-delay='1'
+                                                                        data-increment='1'>3</span>
+                                                                </div>
+
+                                                            </div>
+                                                            <div class="stat__text">
+                                                                линии<br>
+                                                                автоприема
+                                                            </div>
+                                                        </li>
+                                                        <li class="stat__item">
+                                                            <div class="stat__num">
+                                                                <div class="stat__big-num"><span class='numscroller'
+                                                                        data-min='1' data-max='70' data-delay='2'
+                                                                        data-increment='10'>70</span>
+                                                                </div>
+                                                            </div>
+                                                            <div class="stat__text">
+                                                                парковочных мест для зерновозов
+                                                            </div>
+                                                        </li>
+                                                    </ul>
+                                                    <ul class="charact__content-info">
+                                                        <li>
+                                                            <div class="charact__content-icon">
+                                                                <img src="img/icons/char01.svg" alt="" />
+                                                            </div>
+                                                            <div class="charact__content-text">
+                                                                собственная автонакопительная площадка в порт
+                                                            </div>
+                                                        </li>
+                                                        <li>
+                                                            <div class="charact__content-icon">
+                                                                <img src="img/icons/char02.svg" alt="" />
+                                                            </div>
+                                                            <div class="charact__content-text">
+                                                                эффективная логистика доставки грузов в порт
+                                                            </div>
+                                                        </li>
+                                                        <li>
+                                                            <div class="charact__content-icon">
+                                                                <img src="img/icons/char03.svg" alt="" />
+                                                            </div>
+                                                            <div class="charact__content-text">
+                                                                единственный зерновой терминал с заездом с федеральной
+                                                                трассы
+                                                                М–4 «Дон»
+                                                            </div>
+                                                        </li>
+                                                        <li>
+                                                            <div class="charact__content-icon">
+                                                                <img src="img/icons/char04.svg" alt="" />
+                                                            </div>
+                                                            <div class="charact__content-text">
+                                                                автоматизированная
+                                                                система определения
+                                                                качества зерна
+                                                            </div>
+                                                        </li>
+                                                        <li>
+                                                            <div class="charact__content-icon">
+                                                                <img src="img/icons/char05.svg" alt="" />
+                                                            </div>
+                                                            <div class="charact__content-text">
+                                                                бесперебойная
+                                                                работа
+                                                                автовыгрузки
+                                                            </div>
+                                                        </li>
+                                                    </ul>
+
+                                                </div>
+                                                <div class="charact__content-wrap second-wrap">
+                                                    <h3 class="charact__content-sub-title ">Ро-Ро комплекс</h3>
+                                                    <ul class="charact__content-stat stat">
+                                                        <li class="stat__item for-pc">
+                                                            <div class="stat__num">
+                                                                <div class="stat__big-num"><span class="integret">
+                                                                        <span class='numscroller' data-min='1'
+                                                                            data-max='10' data-delay='1'
+                                                                            data-increment='1'>10</span> 000
+                                                                    </span>
+                                                                </div>
+                                                            </div>
+                                                            <div class="stat__text">
+                                                                автомобилей в год —
+                                                                пропускная способность
+                                                            </div>
+                                                        </li>
+                                                        <li class="stat__item for-mob">
+                                                            <div class="stat__num">
+                                                                <div class="stat__big-num"><span class="integret">10
+                                                                    </span>
+                                                                </div>
+                                                                тыс.
+                                                            </div>
+                                                            <div class="stat__text">
+                                                                автомобилей <br> в год —
+                                                                пропускная способность
+                                                            </div>
+                                                        </li>
+                                                        <li class="stat__item">
+                                                            <div class="stat__num">
+                                                                <div class="stat__big-num"><span class='numscroller'
+                                                                        data-min='1' data-max='500' data-delay='3'
+                                                                        data-increment='10'>500</span>
+                                                                </div>
+                                                            </div>
+                                                            <div class="stat__text">
+                                                                автомобилей единовременного
+                                                                хранения — емкость площадок
+                                                            </div>
+                                                        </li>
+
+                                                    </ul>
+
+                                                </div>
+                                            </div>
+                                            <div class="charact__content-row second-row">
+                                                <h3 class="charact__content-sub-title">Железнодорожный <br> прием</h3>
+                                                <!-- поменял местами -->
+                                                <img class="big-photo" src="img/charact/hopper.png"
+                                                    data-aos="fade-right" alt="" />
+                                                <ul class="charact__content-stat stat">
+                                                    <li class="stat__item">
+                                                        <div class="stat__num">
+                                                            <div class="stat__big-num"><span>
+                                                                    <span class='numscroller' data-min='1' data-max='2'
+                                                                        data-delay='1' data-increment='1'>2</span><span
+                                                                        class='numscroller' data-min='1' data-max='400'
+                                                                        data-delay='3' data-increment='10'>400</span>
+                                                                </span>
+                                                            </div>
+                                                            тонн / ч
+                                                        </div>
+                                                        <div class="stat__text">
+                                                            пропускная способность
+                                                        </div>
+                                                    </li>
+                                                    <li class="stat__item">
+                                                        <div class="stat__num">
+                                                            <div class="stat__big-num"><span class='numscroller'
+                                                                    data-min='1' data-max='3' data-delay='1'
+                                                                    data-increment='1'>3</span>
+                                                            </div>
+
+                                                        </div>
+                                                        <div class="stat__text">
+                                                            линии ж/д приема
+                                                        </div>
+                                                    </li>
+                                                    <li class="stat__item">
+                                                        <div class="stat__num">
+                                                            <div class="stat__big-num"><span class='numscroller'
+                                                                    data-min='1' data-max='6' data-delay='1'
+                                                                    data-increment='1'>6</span>
+                                                            </div>
+                                                        </div>
+                                                        <div class="stat__text">
+                                                            возможность обрабатывать
+                                                            по 2 вагона единовременно
+                                                            на каждом из 3–х путей
+                                                        </div>
+                                                    </li>
+                                                    <li class="stat__item">
+                                                        <div class="stat__num">
+                                                            <div class="stat__big-num"><span class='numscroller'
+                                                                    data-min='1' data-max='150' data-delay='3'
+                                                                    data-increment='10'>150</span>
+                                                            </div>
+                                                        </div>
+                                                        <div class="stat__text">
+                                                            вагонов в сутки —
+                                                            пропускная способность
+                                                            железной дороги
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                                <ul class="charact__content-info">
+                                                    <li>
+                                                        <div class="charact__content-icon">
+                                                            <img src="img/icons/char03.svg" alt="" />
+                                                        </div>
+                                                        <div class="charact__content-text">
+                                                            выделенный доступ к железнодорожной сети
+                                                            от новороссийского транспортного узла к зерновому
+                                                        </div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="charact__content-icon">
+                                                            <img src="img/icons/char04.svg" alt="" />
+                                                        </div>
+                                                        <div class="charact__content-text">
+                                                            прямой доступ к ж/д парку для контроля
+                                                            и поддержания надлежащего состоянием путей
+                                                        </div>
+                                                    </li>
+                                                </ul>
+
+                                            </div>
+                                        </section>
+                                        <section class="charact__content-block second">
+                                            <div class="figure"></div>
+                                            <svg class="charact__section-num" width="76" height="165"
+                                                viewBox="0 0 76 165" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M74.9674 138.354H0.231873L36.7324 104.301C36.733 104.301 36.7336 104.3 36.7341 104.3C49.525 92.5744 58.4659 82.5719 63.5238 74.2963C68.7438 66.0046 71.359 57.1646 71.359 47.7852C71.359 32.7497 66.2889 21.1812 56.1063 13.1576C45.9589 5.00968 33.1371 0.952148 17.6787 0.952148C1.74681 0.952148 -11.4645 5.70464 -21.9157 15.2336C-32.3872 24.7812 -38.2768 39.1475 -39.6521 58.2484L-39.6878 58.7446L-39.1917 58.7828L-9.52033 61.0652L-9.0228 61.1035L-8.98353 60.606C-8.07428 49.0888 -5.27527 40.6919 -0.658348 35.3301C4.11337 29.8131 10.2125 27.0587 17.6787 27.0587C24.2747 27.0587 29.4657 28.9296 33.3091 32.6252L33.3162 32.6319L33.3235 32.6385C37.3022 36.1751 39.3182 41.1991 39.3182 47.7852C39.3182 51.5265 38.6452 55.1939 37.2971 58.79C35.9561 62.2155 33.409 66.1217 29.6251 70.5111L29.6242 70.5122C25.9788 74.7651 22.7959 78.1745 20.0743 80.7449L20.0692 80.7498L20.0641 80.7549C17.4847 83.3343 13.0782 87.5131 6.83976 93.295L6.83784 93.2968L-43.6035 140.543L-43.7617 140.691V140.908V163.96V164.46H-43.2617H74.9674H75.4674V163.96V138.854V138.354H74.9674Z"
+                                                    stroke="white" />
+                                            </svg>
+
+                                            <!-- добавил класс first -->
+                                            <div class="charact__content-column first">
+                                                <h3 class="charact__content-sub-title">Силоса</h3>
+                                                <ul class="charact__content-stat stat">
+                                                    <li class="stat__item">
+                                                        <div class="stat__num">
+                                                            <div class="stat__big-num"><span class='numscroller'
+                                                                    data-min='1' data-max='220' data-delay='3'
+                                                                    data-increment='10'>220</span>
+                                                            </div>
+                                                            тыс. <br>
+                                                            тонн
+                                                        </div>
+                                                        <div class="stat__text">
+                                                            вместимость
+                                                            силосов
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <div class="charact__content-column">
+                                                <h2 class="charact__content-title">Накопление зерна и формирование
+                                                    судовых партий</h2>
+                                                <h3 class="charact__content-sub-title for-mob">Силоса</h3>
+                                                <!-- поменял местами -->
+                                                <img class="big-photo" src="img/charact/silus.png" alt=""
+                                                    data-aos="fade-right" />
+                                                <ul class="charact__content-stat stat for-mob">
+                                                    <li class="stat__item">
+                                                        <div class="stat__num">
+                                                            <div class="stat__big-num"><span class='numscroller'
+                                                                    data-min='1' data-max='220' data-delay='3'
+                                                                    data-increment='10'>220
+                                                                    000</span>
+                                                            </div>
+                                                            тонн
+                                                        </div>
+                                                        <div class="stat__text">
+                                                            вместимость
+                                                            силосов
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                                <ul class="charact__content-info">
+                                                    <li>
+                                                        <div class="charact__content-icon">
+                                                            <img src="img/icons/char06.svg" alt="" />
+                                                        </div>
+                                                        <div class="charact__content-text">
+                                                            лаборатория
+                                                            по контролю
+                                                            качества зерна
+                                                        </div>
+                                                    </li>
+
+                                                </ul>
+                                            </div>
+
+                                        </section>
+                                        <section class="charact__content-block third">
+                                            <h3 class="charact__content-title">Отгрузка на суда</h3>
+                                            <!-- поменял местами -->
+                                            <img class="big-photo" src="img/charact/ship.png" alt=""
+                                                data-aos="fade-left" />
+                                            <ul class="charact__content-stat stat">
+                                                <li class="stat__item">
+                                                    <div class="stat__num">
+                                                        <div class="stat__big-num"><span class='numscroller'
+                                                                data-min='1' data-max='100' data-delay='2'
+                                                                data-increment='10'>100</span>
+                                                        </div>
+                                                        тыс. <br>
+                                                        тонн
+                                                    </div>
+                                                    <div class="stat__text">
+                                                        дедвейт
+                                                        принимаемых судов
+                                                    </div>
+                                                </li>
+                                                <li class="stat__item">
+                                                    <div class="stat__num">
+                                                        <div class="stat__big-num"><span class="integret">
+                                                                <span class='numscroller' data-min='1' data-max='6'
+                                                                    data-delay='1' data-increment='1'>6</span>,0
+                                                        </div>
+                                                        млн <br>
+                                                        тонн
+                                                    </div>
+                                                    <div class="stat__text">
+                                                        мощность
+                                                        перевалки зерна
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                            <ul class="charact__content-stat stat size third-size">
+                                                <li class="stat__item">
+                                                    <div class="stat__num">
+                                                        <div class="stat__big-num"><span class='numscroller'
+                                                                data-min='1' data-max='309' data-delay='2'
+                                                                data-increment='10'>309</span>
+                                                        </div>
+                                                        м
+                                                    </div>
+                                                    <div class="stat__text">
+                                                        длина
+                                                    </div>
+                                                </li>
+
+                                                <li class="stat__item">
+                                                    <div class="stat__num">
+                                                        <div class="stat__big-num"><span class="integret">
+                                                                <span class='numscroller' data-min='1' data-max='16'
+                                                                    data-delay='1' data-increment='1'>16</span>,<span
+                                                                    class='numscroller' data-min='1' data-max='9'
+                                                                    data-delay='1' data-increment='1'>9</span>
+                                                            </span>
+                                                        </div>
+                                                        м
+                                                    </div>
+                                                    <div class="stat__text">
+                                                        глубина
+                                                    </div>
+                                                </li>
+
+                                            </ul>
+                                            <ul class="charact__content-stat stat size first-size">
+                                                <li class="stat__item">
+                                                    <div class="stat__num">
+                                                        <div class="stat__big-num"><span class='numscroller'
+                                                                data-min='1' data-max='251' data-delay='3'
+                                                                data-increment='10'>251</span>
+                                                        </div>
+                                                        м
+                                                    </div>
+                                                    <div class="stat__text">
+                                                        длина
+                                                    </div>
+                                                </li>
+
+                                                <li class="stat__item">
+                                                    <div class="stat__num">
+                                                        <div class="stat__big-num"><span class="integret"><span
+                                                                    class='numscroller' data-min='1' data-max='12'
+                                                                    data-delay='1' data-increment='1'>12</span>,4</span>
+                                                        </div>
+                                                        м
+                                                    </div>
+                                                    <div class="stat__text">
+                                                        глубина
+                                                    </div>
+                                                </li>
+
+                                            </ul>
+                                            <ul class="charact__content-stat stat size second-size">
+
+                                                <li class="stat__item">
+                                                    <div class="stat__num">
+                                                        <div class="stat__big-num"><span class='numscroller'
+                                                                data-min='1' data-max='128' data-delay='3'
+                                                                data-increment='10'>128</span>
+                                                        </div>
+                                                        м
+                                                    </div>
+                                                    <div class="stat__text">
+                                                        длина
+                                                    </div>
+                                                </li>
+
+                                                <li class="stat__item">
+                                                    <div class="stat__num">
+                                                        <div class="stat__big-num"><span class="integret">
+                                                                <span class='numscroller' data-min='1' data-max='11'
+                                                                    data-delay='1' data-increment='1'>11</span>,2</span>
+                                                        </div>
+                                                        м
+                                                    </div>
+                                                    <div class="stat__text">
+                                                        глубина
+                                                    </div>
+                                                </li>
+                                            </ul>
+
+                                            <svg class="charact__section-num for-pc" width="89" height="166"
+                                                viewBox="0 0 89 166" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M109.868 76.2195L109.54 76.5967L109.543 76.5996L109.868 76.2195ZM106.418 151.43L106.721 151.827L106.722 151.826L106.418 151.43ZM20.168 152.12L19.8591 152.513L19.8618 152.515L20.168 152.12ZM1.53797 114.86L1.5037 114.361L0.987697 114.396L1.04059 114.911L1.53797 114.86ZM31.668 112.79L32.1633 112.721L32.0995 112.259L31.6337 112.291L31.668 112.79ZM84.568 132.34L84.8942 132.718L84.8951 132.718L84.568 132.34ZM85.488 92.0895L85.1399 92.4485L85.488 92.0895ZM38.338 87.7195H37.838V88.3352L38.4406 88.2089L38.338 87.7195ZM38.338 66.3295L37.9895 65.971L37.838 66.1183V66.3295H38.338ZM79.508 26.3095L79.8565 26.668L80.7397 25.8095H79.508V26.3095ZM9.81797 26.3095H9.31797V26.8095H9.81797V26.3095ZM9.81797 1.00951V0.509514H9.31797V1.00951H9.81797ZM119.528 1.00951H120.028V0.509514H119.528V1.00951ZM119.528 23.5495L119.857 23.9258L120.028 23.7764V23.5495H119.528ZM73.528 63.7995L73.1987 63.4232L72.2911 64.2174L73.4944 64.2984L73.528 63.7995ZM109.543 76.5996C118.912 84.6082 123.628 96.336 123.628 111.87H124.628C124.628 96.123 119.838 84.0842 110.193 75.8395L109.543 76.5996ZM123.628 111.87C123.628 129.07 117.776 142.097 106.114 151.033L106.722 151.826C118.674 142.669 124.628 129.323 124.628 111.87H123.628ZM106.115 151.032C94.5665 159.845 79.8835 164.27 62.028 164.27V165.27C80.0525 165.27 94.9628 160.801 106.721 151.827L106.115 151.032ZM62.028 164.27C45.0921 164.27 31.2542 160.075 20.4742 151.724L19.8618 152.515C30.8551 161.031 44.9239 165.27 62.028 165.27V164.27ZM20.4769 151.726C9.87183 143.394 3.71125 131.11 2.03535 114.808L1.04059 114.911C2.73802 131.422 8.99745 143.979 19.8591 152.513L20.4769 151.726ZM1.57224 115.358L31.7022 113.288L31.6337 112.291L1.5037 114.361L1.57224 115.358ZM31.1727 112.858C32.4102 121.83 35.5914 128.626 40.7679 133.175C45.9451 137.725 53.0527 139.97 62.028 139.97V138.97C53.2165 138.97 46.3709 136.768 41.428 132.424C36.4845 128.08 33.3791 121.536 32.1633 112.721L31.1727 112.858ZM62.028 139.97C71.6172 139.97 79.2588 137.571 84.8942 132.718L84.2417 131.961C78.8371 136.615 71.4521 138.97 62.028 138.97V139.97ZM84.8951 132.718C90.6968 127.7 93.578 120.728 93.578 111.87H92.578C92.578 120.491 89.7858 127.166 84.2409 131.961L84.8951 132.718ZM93.578 111.87C93.578 103.48 91.0101 96.7478 85.836 91.7306L85.1399 92.4485C90.0858 97.2445 92.578 103.699 92.578 111.87H93.578ZM85.836 91.7306C80.6488 86.7005 72.9113 84.2295 62.718 84.2295V85.2295C72.7647 85.2295 80.2072 87.6652 85.1399 92.4485L85.836 91.7306ZM62.718 84.2295C55.9254 84.2295 47.7624 85.2326 38.2354 87.2302L38.4406 88.2089C47.9269 86.2198 56.0172 85.2295 62.718 85.2295V84.2295ZM38.838 87.7195V66.3295H37.838V87.7195H38.838ZM38.6865 66.688L79.8565 26.668L79.1595 25.951L37.9895 65.971L38.6865 66.688ZM79.508 25.8095H9.81797V26.8095H79.508V25.8095ZM10.318 26.3095V1.00951H9.31797V26.3095H10.318ZM9.81797 1.50951H119.528V0.509514H9.81797V1.50951ZM119.028 1.00951V23.5495H120.028V1.00951H119.028ZM119.199 23.1732L73.1987 63.4232L73.8572 64.1758L119.857 23.9258L119.199 23.1732ZM73.4944 64.2984C89.38 65.3676 101.372 69.4878 109.54 76.5967L110.196 75.8424C101.804 68.5379 89.5693 64.3781 73.5616 63.3006L73.4944 64.2984Z"
+                                                    fill="white" />
+                                            </svg>
+                                            <svg class="charact__section-num for-mob" width="22" height="56"
+                                                viewBox="0 0 22 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <mask id="mask0" mask-type="alpha" maskUnits="userSpaceOnUse" x="0"
+                                                    y="0" width="22" height="56">
+                                                    <rect x="0.942871" width="21" height="56" fill="#C4C4C4" />
+                                                </mask>
+                                                <g mask="url(#mask0)">
+                                                    <path
+                                                        d="M32.3029 26.128L31.6463 26.8823L31.6531 26.8881L32.3029 26.128ZM31.3429 47.056L31.9495 47.851L31.9511 47.8498L31.3429 47.056ZM7.34287 47.248L6.72504 48.0343L6.73047 48.0386L7.34287 47.248ZM2.15887 36.88L2.09033 35.8824L1.05833 35.9533L1.16411 36.9823L2.15887 36.88ZM10.5429 36.304L11.5335 36.1674L11.4059 35.2423L10.4743 35.3064L10.5429 36.304ZM25.2629 41.744L25.9154 42.5018L25.917 42.5004L25.2629 41.744ZM25.5189 30.544L24.8227 31.2619L25.5189 30.544ZM12.3989 29.328H11.3989V30.5594L12.6041 30.3067L12.3989 29.328ZM12.3989 23.376L11.7018 22.659L11.3989 22.9535V23.376H12.3989ZM23.8549 12.24L24.5519 12.957L26.3183 11.24H23.8549V12.24ZM4.46287 12.24H3.46287V13.24H4.46287V12.24ZM4.46287 5.2V4.2H3.46287V5.2H4.46287ZM34.9909 5.2H35.9909V4.2H34.9909V5.2ZM34.9909 11.472L35.6494 12.2246L35.9909 11.9258V11.472H34.9909ZM22.1909 22.672L21.5324 21.9194L19.7171 23.5078L22.1237 23.6697L22.1909 22.672ZM31.6531 26.8881C34.0222 28.9133 35.2709 31.909 35.2709 36.048H37.2709C37.2709 31.483 35.8742 27.8653 32.9527 25.3679L31.6531 26.8881ZM35.2709 36.048C35.2709 40.6162 33.7304 43.9668 30.7347 46.2622L31.9511 47.8498C35.526 45.1105 37.2709 41.1225 37.2709 36.048H35.2709ZM30.7362 46.261C27.7039 48.5751 23.8139 49.768 18.9909 49.768V51.768C24.1519 51.768 28.4965 50.4862 31.9495 47.851L30.7362 46.261ZM18.9909 49.768C14.4231 49.768 10.7713 48.6389 7.95527 46.4575L6.73047 48.0386C9.97313 50.5505 14.0867 51.768 18.9909 51.768V49.768ZM7.96069 46.4617C5.23058 44.3166 3.60144 41.1337 3.15363 36.7777L1.16411 36.9823C1.65497 41.757 3.48182 45.4861 6.72505 48.0343L7.96069 46.4617ZM2.22741 37.8776L10.6114 37.3016L10.4743 35.3064L2.09033 35.8824L2.22741 37.8776ZM9.55225 36.4406C9.91535 39.0731 10.8657 41.1811 12.5068 42.6232C14.149 44.0664 16.3524 44.728 18.9909 44.728V42.728C16.68 42.728 15.0007 42.1523 13.827 41.1208C12.652 40.0883 11.8531 38.4842 11.5335 36.1674L9.55225 36.4406ZM18.9909 44.728C21.8013 44.728 24.1485 44.0232 25.9154 42.5018L24.6103 40.9862C23.3052 42.1101 21.4711 42.728 18.9909 42.728V44.728ZM25.917 42.5004C27.7525 40.9129 28.6309 38.7173 28.6309 36.048H26.6309C26.6309 38.2427 25.9306 39.8444 24.6087 40.9876L25.917 42.5004ZM28.6309 36.048C28.6309 33.5246 27.8512 31.4127 26.215 29.8261L24.8227 31.2619C26.0026 32.406 26.6309 33.9634 26.6309 36.048H28.6309ZM26.215 29.8261C24.5524 28.2139 22.1454 27.496 19.1829 27.496V29.496C21.8523 29.496 23.6693 30.1434 24.8227 31.2619L26.215 29.8261ZM19.1829 27.496C17.2138 27.496 14.8797 27.7861 12.1937 28.3493L12.6041 30.3067C15.2087 29.7606 17.3973 29.496 19.1829 29.496V27.496ZM13.3989 29.328V23.376H11.3989V29.328H13.3989ZM13.0959 24.093L24.5519 12.957L23.1579 11.5229L11.7018 22.659L13.0959 24.093ZM23.8549 11.24H4.46287V13.24H23.8549V11.24ZM5.46287 12.24V5.2H3.46287V12.24H5.46287ZM4.46287 6.2H34.9909V4.2H4.46287V6.2ZM33.9909 5.2V11.472H35.9909V5.2H33.9909ZM34.3324 10.7194L21.5324 21.9194L22.8494 23.4246L35.6494 12.2246L34.3324 10.7194ZM22.1237 23.6697C26.4389 23.9602 29.567 25.0725 31.6463 26.8823L32.9594 25.3737C30.4308 23.1728 26.8175 21.9811 22.258 21.6743L22.1237 23.6697Z"
+                                                        fill="white" />
+                                                </g>
+                                            </svg>
+
+                                            <div class="figure"></div>
+                                            <div class="figure-two"></div>
+                                            <div class="figure-three"></div>
+                                            <div class="figure-circle"></div>
+                                        </section>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+        @@include('_footer.html',{})
+    </div>
+    @@include('_js.html',{})
+</body>
+
+</html>

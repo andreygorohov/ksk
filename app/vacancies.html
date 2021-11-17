@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('_head.html')
+
+
+<body id="body">
+    <div class="wrapper">
+        @@include('_header-wh.html',{
+        "link": "5"
+        })
+        <main class="page">
+            <section class="vacancies">
+                <div class="vacancies__head about-head">
+                    <div class='about-head__content _container'>
+                        <h1 class="about-head__title _title"><span>Вакансии</span></h1>
+                        <h1 class="about-head__title _title for-mob"><span>Вакансии</span></h1>
+                    </div>
+                    <div class="about-head__bg _ibg">
+                        <img src="img/contacts/bg.jpg" alt="">
+                    </div>
+                    <div class="about-head__bg _ibg for-mob">
+                        <img src="img/contacts/bg2.jpg" alt="">
+                    </div>
+                </div>
+                <div class='_container vacancies__content'>
+                    <div class="vacancies__block-shadow">
+                        <div class="vacancies__block">
+                            <div class="vacancies__icon">
+                                <img src="img/contacts/01.png" alt="" />
+                            </div>
+                            <div class="vacancies__info">
+                                <h2 class="vacancies__title">Хочу работать в Вашей компании</h2>
+                                <div class="vacancies__text">
+                                    <p>
+                                        Коллектив компании АО «КСК» — ее основная ценность. Мы ценим в своих работниках
+                                        стремление к достижению результата, готовность работать в команде и брать на
+                                        себя
+                                        ответственность.
+                                    </p>
+                                    <p>
+                                        Если хотите стать членом нашей команды, заполните анкету соискателя и вышлите ее
+                                        на
+                                        электронный адрес <a href="mailto:personal@gt-ksk.com">personal@gt-ksk.com</a>
+                                    </p>
+                                </div>
+                                <div class="vacancies__links">
+                                    <div class="vacancies__links-item">
+                                        <span>Анкета соискателя в формате Word</span>
+                                        <a href="" class="vacancies__btn down-btn black"></a>
+                                    </div>
+                                    <div class="vacancies__links-item">
+                                        <span>Положение по обработке персональных данных АО «КСК» в формате PDF</span>
+                                        <a href="" class="vacancies__btn down-btn black"></a>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+        @@include('_footer.html',{})
+    </div>
+    @@include('_js.html',{})
+</body>
+
+</html>
